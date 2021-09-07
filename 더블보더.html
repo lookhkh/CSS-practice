@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+        }
+      .square{
+        width: 100%;
+        height: 700px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+      }
+
+      .square span{
+        position: absolute;
+        border: 1px solid white;
+        width: 300px;
+        height: 300px;
+        border-radius: 40% 70% 30% 30% / 60% 20% 30% 40% / 40% 20% 10% 40% / 10% 20% 30% 20%;
+        transition: 3s;
+      }
+
+      .square span:nth-child(1){
+        animation: rotate 4s linear infinite;
+
+      }
+
+      .square span:nth-child(2){
+        animation: rotate 7s linear infinite;
+
+      }
+
+
+      .square span:nth-child(3){
+        animation: rotate 10s linear infinite reverse;
+
+      }
+
+      .square span:nth-child(4){
+        animation: rotate 15s linear infinite reverse;
+
+      }
+
+      .square span:nth-child(5){
+        animation: rotate 30s linear infinite reverse;
+
+      }
+
+
+      .wrapper .square:nth-child(1):hover span{
+        background-color:rgba(255,24,42,0.5);
+        background-blend-mode: color;
+        border : none
+      }
+
+      
+      .wrapper .square:nth-child(2):hover span{
+        background-color:rgba(70,244,22,0.5);
+        background-blend-mode: color;
+        border : none
+      }
+
+      
+      .wrapper .square:nth-child(3):hover span{
+        background-color:rgba(100,4,30,0.5);
+        background-blend-mode: color;
+        border : none
+      }
+
+      .square:hover span:nth-child(1){
+        opacity: 0.5;
+
+      }
+
+      .square:hover span:nth-child(2){
+        opacity: 0.2;
+
+      }
+
+
+      .square:hover span:nth-child(3){
+        opacity: 0.1;
+
+      }
+
+
+      .square div{
+          position: absolute;
+          width: 30%;
+          text-align: center;
+          color: white;
+      }
+
+      div a {
+          cursor: pointer;
+      }
+
+    
+
+
+
+      
+
+      @keyframes rotate {
+            0%{
+                transform: rotate(0deg);
+            }
+
+            100%{
+                transform: rotate(360deg);
+            }
+      }
+       
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="square">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <div>
+           <h2>Heading Text</h2>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit
+               . Modi adipisci quidem quam, quo vero provident deleniti optio, 
+               nemo tempore dolor odit dignissimos similique rerum accusamus id, h
+               arum beatae ut commodi.</p>
+            <a>Read More</a>
+       </div>
+
+    </div>
+
+    <div class="square">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div>
+            <h2>Heading Text</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                . Modi adipisci quidem quam, quo vero provident deleniti optio, 
+                nemo tempore dolor odit dignissimos similique rerum accusamus id, h
+                arum beatae ut commodi.</p>
+             <a>Read More</a>
+        </div>
+ 
+     </div>
+
+     <div class="square">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div>
+            <h2>Heading Text</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                . Modi adipisci quidem quam, quo vero provident deleniti optio, 
+                nemo tempore dolor odit dignissimos similique rerum accusamus id, h
+                arum beatae ut commodi.</p>
+             <a>Read More</a>
+        </div>
+ 
+     </div>
+    </div>
+</body>
+</html>
+
+
+
+    
