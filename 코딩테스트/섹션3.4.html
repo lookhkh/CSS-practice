@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s, t){
+                let answer=[];
+                let arr = s.split('');
+
+                let indexsOft = [];
+
+                for(temp in arr){
+                    if(arr[temp]===t){
+                        indexsOft.push(parseInt(temp));
+                    }
+                }
+
+                console.log("T의 위치 : "+indexsOft)
+
+                for(i in arr){
+                                        
+                     
+                    let min = 1000;
+                    
+
+                    for(target of indexsOft){
+
+                        if(i === target) {
+                            answer.push(0)
+                            continue;   
+                        }
+                        let result = Math.abs(i-target);
+                        console.log("결과값 : "+result);
+                        
+                        if(result<min){
+                            min = result;
+                        }
+                    }
+
+                    console.log(min)
+                    answer.push(min);
+
+                }
+
+
+                
+
+
+                return answer;
+            }
+            
+            let str="teachermode";
+            console.log(solution(str, 'e'));
+        </script>
+    </body>
+</html>
