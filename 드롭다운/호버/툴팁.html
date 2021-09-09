@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import
+        url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+        body{
+            font-family: 'Raleway', sans-serif;
+            color: #222;
+            line-height: 1.5em;
+            font-weight: 300;
+            margin: 0;
+           
+        }
+        a{
+            color: #222;
+            text-decoration: none;
+        }
+
+        .tooltips{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            
+        }
+
+        .tooltip{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tooltip p{
+            position: absolute;
+            color: white;
+            font-size: 1.2rem;
+            width: 90%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tooltip img:first-child,.tooltip p{
+            visibility: hidden;
+        }
+
+        .tooltip:hover img:first-child,.tooltip p{
+            visibility: visible;
+        }
+
+       
+
+        
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="tooltips">
+        <div class="tooltip">
+            <img src="말풍선.png">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam molestiae consequatur enim ducimus velit eaque id minima provident magnam maxime, minus corporis tempore voluptatem quisquam q
+                uaerat accusantium autem? Aperiam, esse!</p>
+            <img src="../sejong.png" height="400px">
+        </div>
+
+       
+    </div>
+    
+</body>
+</html>

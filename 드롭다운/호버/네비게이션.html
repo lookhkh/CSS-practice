@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import
+        url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+        body{
+            font-family: 'Raleway', sans-serif;
+            color: #222;
+            line-height: 1.5em;
+            font-weight: 300;
+            margin: 0;  
+        }
+        a{
+            color: #ffff;
+            text-decoration: none;
+            font-size: 2.5rem;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(7, 150, 197);
+            position: relative;
+        }
+
+        header{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            
+        }
+
+        header a {
+            margin: 30px;
+            transition: 0.2s;
+        }
+
+        header:hover a{
+            opacity: 0.2;
+        }
+
+        header a:hover{
+            opacity: 1;
+        }
+
+        header a:hover::before{
+            content: ">";
+            margin-right: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="#">New Arrivals</a>
+            <a href="#">Summer Collection</a>
+            <a href="#">Winter Collection</a>
+            <a href="#">Special Offers</a>
+            <a href="#">Trends</a>
+            <a href="#">Trends</a>
+            <a href="#">Trends</a>
+            <a href="#">Trends</a>
+
+        </header>
+    </div>
+    
+</body>
+</html>

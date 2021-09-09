@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import
+        url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+        body{
+            font-family: 'Raleway', sans-serif;
+            color: #222;
+            line-height: 1.5em;
+            font-weight: 300;
+            margin: 0;
+            
+           
+        }
+        a{
+            color: #222;
+            text-decoration: none;
+        }
+
+        
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 600px;
+            border: 1px solid white;
+            position: relative;
+        }
+
+        .front,
+        .back{
+            width: 100%;
+            transition: 0.5s;
+            text-align: center;
+            position: absolute;
+
+        }
+
+        .front{
+            height: 40%;
+            box-shadow: 7px 7px rgb(235, 228, 228), -2px -2px rgb(223, 212, 212); 
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .back{
+            padding: 25px 0 25px 0;
+            box-shadow: 7px 7px rgb(235, 228, 228);
+            visibility: hidden;
+            z-index: -100;
+
+            
+            
+        }
+
+        .back span{
+            display: block;
+        }
+
+
+        button{
+            width: 30%;
+            padding: 5px;
+            border-radius: 4px;
+            background-color: rgb(9, 9, 204);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .img:hover .front{
+            transform: translateY(-50%);
+        }
+
+        .img:hover .front img{
+            animation: scaleup 1s linear infinite;
+
+        }
+
+        .img:hover .back{
+            transform: translateY(60%);
+            visibility: visible;
+        }
+
+        @keyframes scaleup {
+            0%{
+                transform: scale(1);
+            }
+
+            50%{
+                transform: scale(1.2);
+            }
+
+            100%{
+                transform: scale(1);
+
+            }
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="img">
+                <div class="front">
+                    <img src="./블로그.png" width="50%%" height="50%">
+                    <h2 style="margin-top:40px;">네이버</h2>
+                </div>
+                <div class="back">
+                    <span>Lorem ipsum dolor 
+                        sit amet consectetur adipisicing elit. Impedit, 
+                        adipisci, ex iure facilis, unde voluptatum tempora 
+                        aspernatur maiores quasi iusto pariatur soluta eligendi 
+                        consequatur et amet. Dolore commodi ratione autem.</span>
+                    <button>Detail</button>
+                </div>
+            </div>
+         </div>
+    
+</body>
+</html>

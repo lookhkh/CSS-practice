@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){
+               
+          let maxIndex = 0;
+          let max = 0;      
+          arr=arr.map(a=>{
+
+                 function result(){
+                    let temp = String(a);
+                    let result = 0;
+                    for(ele of temp){
+                        result+=Number(ele);
+                    }
+
+                    return result;
+                }
+
+               return result();
+            })
+
+            for(i in arr){
+                if(arr[i]>max){
+                    max = arr[i];
+                    maxIndex = i;
+                }else if(arr[i]===max){
+                    if(){
+
+                    }
+                    
+                }
+            }
+
+
+            
+                return answer;
+            }
+            
+            let arr=[128, 460, 603, 40, 521, 137, 123];
+            console.log(solution(7, arr));
+        </script>
+    </body>
+</html>
+
+
+
