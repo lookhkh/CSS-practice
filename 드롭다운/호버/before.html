@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 2rem;
+        }
+
+        span{
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .wrapper span:nth-child(1):hover::before{
+            content: "★";
+            animation: leftToRight 1s linear infinite alternate;
+            position: absolute;
+            top: -60%;
+
+        }
+
+        .wrapper span:nth-child(2):hover::before{
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: rgb(182, 136, 136);
+        
+            animation: rightToLeft 1s linear infinite alternate;
+            position: absolute;
+            top: -10%;
+
+        }
+
+
+        @keyframes leftToRight {
+            0%{
+                left: 0%;
+
+            }
+
+            100%{
+                left: 90%;
+            }
+        }
+
+        @keyframes rightToLeft {
+            0%{
+                width: 90%;
+
+            }
+
+            100%{
+                width: 0%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <span>Coding Works Online Class</span>
+        <span>Coding Works Online Class</span>
+        <span>Coding Works Online Class</span>
+        <span>Coding Works Online Class</span>
+        <span>Coding Works Online Class</span>
+    </div>
+</body>
+</html>

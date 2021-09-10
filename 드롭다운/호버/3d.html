@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .app-ui{
+            width: 50%;
+            height: 50%;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-ui{
+            border: 1px solid red;
+            width: 500px;
+            height: 500px;
+            transform: rotate(-34deg) skewX(10deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .app-ui img{
+            position: absolute;
+            transition: 1s;
+            box-shadow: -20px 30px 40px rgba(0,0,0,0.5);
+        }
+
+        .app-ui:hover img:nth-child(1){
+            z-index: 10;
+            transform: translate(10px, -10px) ;
+            opacity: 0.2;
+        }
+        .app-ui:hover img:nth-child(2){
+            z-index: 50;
+            transform: translate(30px, -20px);
+            opacity: 0.4;
+
+
+        }
+
+        .app-ui:hover img:nth-child(3){
+            z-index: 80;
+            transform: translate(60px,-30px);
+            opacity: 0.7;
+
+        }
+        .app-ui:hover img:nth-child(4){
+            z-index: 110;
+            transform: translate(100px,-40px);
+            opacity: 1;
+
+        }
+
+
+
+        
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="app-ui">
+            <img width="40%" src="../sejong.png" alt="">
+            <img width="40%" src="../yua.png" alt="">
+            <img width="40%" src="../sejong.png" alt=""> 
+            <img width="40%" src="../yua.png" alt=""> 
+        </div>
+    </div>
+</body>
+</html>
