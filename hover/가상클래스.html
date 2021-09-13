@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header{
+            width: 700px;
+            height: 200px;
+            display: inherit;
+            justify-content:space-around ;
+            align-items: inherit;
+            border: 1px solid rgb(204, 180, 180);
+            border-radius: 30px;
+            box-shadow: 10px 10px rgb(133, 126, 126), -10px -10px rgb(219, 201, 201) ;
+            position: relative;
+            font-size: 1.4rem;
+        }
+
+        .header div{
+            width: 20%;
+            height: 100%;
+            display: inherit;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .header span::after{
+            content: "";
+            position: absolute;
+            opacity: 0;
+            top: 56%;
+            left: 47%;
+            width: 10px;
+            height: 10px;
+            background-color: lawngreen;
+            transition: 1s;
+        }
+
+   
+
+        .header span:hover::after{
+            display: inline-block;
+            transform:scaleX(9);
+            transform-origin: center;
+            opacity: 1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <div>
+            <span>HOME</span>
+        </div>
+        <div>
+            <span>ABOUT</span>
+        </div>        
+        <div>
+            <span>SERVICE</span>
+        </div>        
+        <div>
+            <span>PROJECT</span>
+        </div>        
+        <div>
+            <span>CONTACT</span>
+        </div>    
+    </div>
+</body>
+</html>

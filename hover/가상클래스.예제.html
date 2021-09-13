@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .gnb{
+            list-style: none;
+            padding: 0;
+            width: 600px;
+            padding:40px;
+            background-color: rgb(243, 236, 236);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(white,0.7);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .gnb li a{
+            font-size: 20px;
+            position: relative;
+        }
+
+        .gnb li a:before{
+            content: '';
+            position: absolute;
+            background-color: dodgerblue;
+            height: 5px;
+            width: 0px;
+            bottom: -10px;
+            transition: 0.5s;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .gnb li a:hover::before{
+            width: 100%;
+
+        }
+
+       
+
+    </style>
+</head>
+<body>
+
+    <ul class="gnb">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUTUS</a></li>
+        <li><a href="#">PROJECT</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+
+</body>
+</html>
