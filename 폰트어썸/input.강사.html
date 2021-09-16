@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a183a8d295.js" crossorigin="anonymous"></script></head>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .item {
+            width: 300px;
+            margin-bottom: 10px;
+            position: relative;        
+            border-radius: 10px;
+        }
+
+        .item input[type=text],
+        .item input[type=email],
+        .item input[type=tel]{
+            border : 1px solid lightgray;
+            height: 40px;
+            width: inherit;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            padding-left: 50px;
+            transition: 0.4s;
+          }
+
+        .item .fa{
+            position: absolute;
+            font-size: 20px;
+            left: 0;
+            top: 0;
+            color: gray;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            transition: 0.9s;
+        }
+
+        .item input:focus{
+            border: 1px solid dodgerblue;
+            box-shadow: 0 0 5px dodgerblue;
+        }
+
+        .item input:focus::placeholder{
+            visibility: hidden;
+        }
+
+
+        
+        .item input:focus +.fa{
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        
+
+    </style>
+    <body>
+    
+
+        <form action="" class="info">
+            <div class="item">
+                <input type="text" placeholder="your name">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="item">
+                <input type="email" placeholder="Email">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <div class="item">
+                <input type="tel" placeholder="PhoneNumber">
+                <i class="fa fa-phone"></i>
+            </div>
+        </form>
+        
+        
+
+
+
+    <!--Form 요소(input button img 등) before, after을 가질 수 없음.  -->
+</body>
+</html>
