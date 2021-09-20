@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a183a8d295.js" crossorigin="anonymous"></script></head>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .container{
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(24, 11, 11);
+            border-radius: 7px;
+            
+
+        }
+
+        .container h5{
+            color: white;
+            margin-top: 0px;
+        }
+
+        span{
+            font-size: 5px;
+            color: white;
+        }
+
+        .skil{
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .desc{
+            display: flex;
+            justify-content: space-between;
+        }
+        .bar{
+            width: 100%;
+            height: 5px;
+            border: 1px solid rgb(206, 169, 169);
+            border-radius: 2px;
+            background-color: black;
+            position: relative;
+            
+        }
+
+        .bar .gauge{
+            display: inline-block;
+            background-color: rgb(209, 219, 188);
+            height: 100%;
+            border-radius: 1px solid white;
+            position: absolute;
+            left: 0;
+            animation: barmove 1s linear forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes barmove {
+            0%{
+                width: 0;
+            }
+
+            100%{
+                width: 90%;
+            }
+        }
+
+
+       
+        
+
+    </style>
+<body>
+ 
+    <div class="container">
+        <h5>SKILL STACK</h5>
+        <div class="skill-bar">
+            <div class="skill">
+                <div class="desc">
+                    <span>HTML5</span>
+                    <span>90%</span>
+                </div>
+                <div class="bar">
+                    <span class="gauge">
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="desc">
+                    <span>CSS</span>
+                    <span>70%</span>
+                </div>
+                <div class="bar">
+                    <span class="gauge">
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="desc">
+                    <span>HTML5</span>
+                    <span>90%</span>
+                </div>
+                <div class="bar">
+                    <span class="gauge">
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="desc">
+                    <span>HTML5</span>
+                    <span>90%</span>
+                </div>
+                <div class="bar">
+                    <span class="gauge">
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="desc">
+                    <span>HTML5</span>
+                    <span>90%</span>
+                </div>
+                <div class="bar">
+                    <span class="gauge">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

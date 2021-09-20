@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a183a8d295.js" crossorigin="anonymous"></script></head>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .skil-progress{
+            width: 500px;
+            padding: 20px;
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 20px 50px rgba(49, 48, 48,0.8);
+        }
+
+        .item{
+        }
+        
+        .item p {
+            overflow: hidden;
+            margin-bottom: 2px;
+            }
+
+        
+        .item p span:nth-child(1) {
+            float: left;
+        }
+        .item p span:nth-child(2) {
+            float: right;
+        }
+
+        .progress {
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .progress-level {
+            height: 10px;
+            background: linear-gradient(to right, crimson, gold);
+            animation: ani 1s
+        }
+
+        @keyframes ani {
+            0%{
+                width: 0;
+            }
+
+        }
+
+    </style>
+<body>
+ 
+    <div class="skil-progress">
+        <h1>SOFTWARE SKILLS</h1>
+        <div class="item">
+            <p>
+                <span>HTML5</span>
+                <span>90%</span>
+            </p>
+            <div class="progress">
+                <div class="progress-level" data-target="html5" >
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <p>
+                <span>CSS</span>
+                <span>80%</span>
+            </p>
+            <div class="progress">
+                <div class="progress-level" data-target="css">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <p>
+                <span>SPRING</span>
+                <span>30%</span>
+            </p>
+            <div class="progress">
+                <div class="progress-level" data-target="spring">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <p>
+                <span>JQuery</span>
+                <span>45%</span>
+            </p>
+            <div class="progress">
+                <div class="progress-level" data-target="jq" >
+                    
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+    
+</body>
+</html>
+<script>
+    window.addEventListener('load',()=>{
+        
+
+        function drawSkilStack(){
+
+        const framme = function(name,score){
+            return{
+                title : name,
+                score : score
+            }
+        }
+
+         const html5 = new framme('html5', parseInt(prompt("HtML")));
+         const css = new framme('css', parseInt(prompt("css")))
+         const spring = new framme('spring', parseInt(prompt("css")))
+         const jq =new framme('jq', parseInt(prompt("css")))
+
+
+        const array = [html5,css,spring,jq]
+
+        let progress_bar = Array.from(document.querySelectorAll('.progress-level'));
+        progress_bar.forEach(a=>{
+          
+            let target = a.dataset.target;
+            
+            const targetObj = array.find(a=>a.title===target);
+            const score = targetObj.score;
+            a.style.width = score+"%";
+
+            const span = a.parentElement.parentElement.firstElementChild.lastElementChild;
+            span.textContent = score+"%"
+            
+                    
+
+        })
+    }
+
+    drawSkilStack()
+
+        
+    })
+
+
+</script>
