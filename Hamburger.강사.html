@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+         body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .container{
+        }
+
+        input[id=triger] {
+
+            right: 0;
+            display: none;
+        }
+
+        label[for=triger]{
+            width: 40px;
+            height: 30px;
+            display: block;
+            position: absolute;
+            cursor: pointer;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 1s;
+        }
+        label[for=triger] span{
+            position: absolute;
+            height: 2px;
+            background-color: #000;
+            width: 100%;
+            right: 0;
+            transition: 0.3s;
+        }
+        label[for=triger] span:nth-child(1){
+            top:0
+        }
+        label[for=triger] span:nth-child(2){
+            top:50%
+        }
+        label[for=triger] span:nth-child(3){
+            top:100%
+        }
+
+        input[id=triger]:checked + label[for=triger] span:nth-child(1){
+            top: 50%;
+            transform: rotate(45deg);   
+        }
+
+        
+        input[id=triger]:checked + label[for=triger] span:nth-child(2){
+            opacity: 0;
+        }   
+
+        
+        input[id=triger]:checked + label[for=triger] span:nth-child(3){
+            top: 50%;
+            transform: rotate(-45deg);   
+        }
+
+        .sidebar{
+            background-color: black;
+            width: 300px;
+            height: 100vh;
+            right: -300px;
+            top: 0;
+            position: fixed;
+            transition: 1s;
+        }
+
+        input[id=triger]:checked + label[for=triger]+.sidebar{
+            right: 0px;
+        }
+
+        input[id=triger]:checked + label[for=triger]{
+            right: 330px
+        }
+
+    </style>
+</head>
+<body>
+        <div class="container">
+                <input type="checkbox" id="triger">
+                <label for="triger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="sidebar"></div>
+             </div>
+</body>
+</html>
