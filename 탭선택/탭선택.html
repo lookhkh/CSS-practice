@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .display{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .checkboxs{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .checkboxs input{
+            margin:0;
+            position: relative;
+            overflow: hidden;
+            top: 25%;
+        }
+
+        
+        .checkboxs input:checked::after{
+            content: " ";
+            width: 100%;
+            height: 100%;
+            background-color: rgb(235, 129, 129);
+            position: absolute;
+            border-radius: 300px;
+        }
+
+        .checkboxs input:nth-child(1):checked + img {
+            opacity: 1;
+        }
+        .checkboxs input:nth-child(2):checked + img {
+            opacity: 1;
+        }
+        .checkboxs input:nth-child(3):checked + img {
+            opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="display">
+        <div class="checkboxs">            
+                <input type="radio" id="huey" name="drone" value="huey"> 
+                <img src="이미지어코디언/sejong.png">
+          
+                <input type="radio" id="dewey" name="drone" value="dewey"> 
+                <img src="이미지어코디언/yua.png">
+                
+                <input type="radio" id="louie" name="drone" value="louie">  
+                <img src="이미지어코디언/KakaoTalk_20210715_000854058.jpg" checked>           
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

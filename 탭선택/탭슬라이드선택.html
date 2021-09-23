@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      a{
+          text-decoration: none;
+          color: black;
+      }
+
+      .inner-tab{
+          width: 300px;
+          height: 350px;
+          position: relative;
+      }
+      input[type=radio]{
+          display: none;
+      }
+      .btn{
+          text-align:center;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+
+      }
+
+      .btn label{
+          width: 30px;
+          height: 30px;
+          background-color: gray;
+          display: inline-block;
+          border-radius: 300px;
+      }
+
+      .contents{
+          display: flex;
+          position: relative;
+      }
+
+      .content{
+          position: absolute;
+          left: -10%;
+          transition: 0.5s;
+          opacity: 0;
+      }
+
+      input:nth-child(1):checked ~.contents div:nth-child(1),
+      input:nth-child(2):checked ~.contents div:nth-child(2),
+      input:nth-child(3):checked ~.contents div:nth-child(3){
+          left: 0;
+          opacity: 1;
+      }
+
+
+      input:nth-child(1):checked ~.btn label:nth-child(1),
+      input:nth-child(2):checked ~.btn label:nth-child(2),
+      input:nth-child(3):checked ~.btn label:nth-child(3){
+        background-color: crimson;
+      }
+      
+
+      .notices span{
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 300px;
+        background-color: crimson;
+        text-align: center;
+        line-height: 80px;
+        color: white;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        transition: 1s;
+        opacity: 0;
+        transition-delay: 0.5s;
+      }
+
+      input:nth-child(1):checked ~.notices span:nth-child(1),
+      input:nth-child(2):checked ~.notices span:nth-child(2),
+      input:nth-child(3):checked ~.notices span:nth-child(3){
+        background-color: rgb(192, 136, 136);
+        top: 0;
+        opacity: 1;
+        z-index: 1000;
+      }
+
+
+   
+   
+      
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="inner-tab">
+        <input type="radio" name="tabmenu" id="tab1" checked>
+        <input type="radio" name="tabmenu" id="tab2">
+        <input type="radio" name="tabmenu" id="tab3">
+        
+        <div class="btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+
+        <div class="notices">
+            <span>30%</span>
+            <span>20%</span>
+            <span>40%</span>
+        </div>
+
+        <div class="contents">
+            <div class="content slide1">
+                <img width="300px" height="300px" src="../이미지어코디언/sejong.png" alt=""                       class="slide2">
+             </div>
+
+             <div class="content slide2">
+                <img width="300px" height="300px" src="../이미지어코디언/yua.png" alt=""                          class="slide3">
+            </div>
+
+            <div class="content slide3">
+                <img width="300px" height="300px" src="../이미지어코디언/KakaoTalk_20210715_000854058.jpg" alt="" class="slide1">
+            </div>  
+        </div>
+
+    </div>
+
+
+</body>
+</html>
