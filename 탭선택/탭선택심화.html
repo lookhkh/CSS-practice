@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+        body{
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+            }
+        a{
+          text-decoration: none;
+          color: black;
+            }
+
+        .tab-inner{
+            height: 500px;
+        }
+
+        input[type=radio]{
+            display: none;
+        }
+
+        .tabs{
+            width: 800px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .items {
+            width: 2400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        .items div{
+            width: 800px;
+            height: 400px;
+            display: inline-block;
+            float: left;
+            text-align: center;
+            padding: 50px;
+        }
+        .btn {
+            text-align: center;
+        }
+        .btn label{
+            width: 10px;
+            height: 10px;
+            background-color: lightgray;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .items div img{
+            width: 100px;
+            border-radius: 100px;
+            margin-bottom: 10px;
+        }
+
+        .items div p b {
+            display: block;
+        }
+
+        .items div p span {
+
+        }
+
+      input[id=tab1]:checked ~ .tabs .items{
+        left: 0;
+      }
+
+      
+      input[id=tab2]:checked ~ .tabs .items{
+        left: -800px;
+      }
+
+      
+      input[id=tab3]:checked ~ .tabs .items{
+        left: -1600px;
+      }
+
+      input[id=tab1]:checked ~ .btn label[for=tab1]{
+        background-color: black;
+      }
+
+      input[id=tab2]:checked ~ .btn label[for=tab2]{
+        background-color: black;
+      }
+
+      input[id=tab3]:checked ~ .btn label[for=tab3]{
+        background-color: black;
+      }
+
+
+      </style>
+</head>
+<body>
+  
+    <div class="tab-inner">
+
+        <input type="radio" name="tabmen" id="tab1" checked>
+        <input type="radio" name="tabmen" id="tab2"> 
+        <input type="radio" name="tabmen" id="tab3">
+
+        <h1 style="text-align: center;">Testimonials</h1>
+        <div class="tabs">
+            <div class="items">
+                <div>
+                    <img width="30%" height="30%" src="../이미지어코디언/sejong.png" />
+                    <p>Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste possimus necessitatibus optio tempore architecto eius illo vitae veniam excepturi porro alias repudiandae quae explicabo, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ut libero animi possimus optio inventore maiores, maxime praesentium expedita odio error quas nam ipsum vitae numquam, at ex dolor sint. tenetur qui temporibus debitis. Soluta, tenetur. dolor sit amet consectetur adipisicing elit. Aperiam harum ut enim sit et dicta quia voluptatem numquam quae quasi quam, architecto aut ullam laborum. Soluta dicta dolor ipsum saepe!</p>
+                    <p>
+                        <b>Sejong</b>
+
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt error laborum architecto voluptas, voluptatem non pariatur odit sint enim, quam optio, maxime itaque minus voluptate repudiandae illum. Nesciunt, nulla. Facere?
+                    </p>
+                </div>
+                <div>
+                    <img width="30%" height="30%" src="../이미지어코디언/sejong.png" />
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Aperiam harum ut enim sit et dicta quia voluptatem numquam quae quasi quam, architecto aut ullam laborum. Soluta dicta dolor ipsum saepe!</p>
+                    <p>
+                        <b>Sejong</b>
+
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt error laborum architecto voluptas, voluptatem non pariatur odit sint enim, quam optio, maxime itaque minus voluptate repudiandae illum. Nesciunt, nulla. Facere?
+                    </p>
+                </div>                
+                <div>
+                    <img width="30%" height="30%" src="../이미지어코디언/sejong.png" />
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                         Aperiam harum ut enim sit et dicta quia voluptatem numquam quae quasi quam, architecto aut ullam laborum. Soluta dicta dolor ipsum saepe!</p>
+                    <p>
+                        <b>Sejong</b>
+
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt error laborum architecto voluptas, voluptatem non pariatur odit sint enim, quam optio, maxime itaque minus voluptate repudiandae illum. Nesciunt, nulla. Facere?
+                    </p>
+                </div>            </div>
+        </div>
+        <div class="btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
