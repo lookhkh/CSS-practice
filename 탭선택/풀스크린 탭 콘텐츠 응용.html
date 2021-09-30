@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      a{
+          text-decoration: none;
+          color: black;
+      }
+
+      .tab-inner{
+          width: 100vw;
+          height: 100vh;
+          position: relative;
+      }
+      input{
+          display: none;
+      }
+      .tabs{
+          overflow:hidden;
+          width: 100%;
+          position: relative;
+          height: 100%;
+      }
+      .items{
+          height: 100vh;
+          width: 300%;
+          transition: 0.5s;
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+      .items div {
+          height: 100vh;
+          float: left;
+          width: 33.33333%;
+          box-sizing: border-box;
+          position: relative;
+      }
+
+      .items div:nth-child(1)::before,
+      .items div:nth-child(2)::before,
+      .items div:nth-child(3)::before{
+        content:'';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background:linear-gradient(135deg, gold, transparent);
+      }
+
+
+      .items div:nth-child(1)::before{
+        background:linear-gradient(135deg, gold, transparent);
+
+         
+      }
+
+      .items div:nth-child(2)::before{
+         
+        background:linear-gradient(135deg, red, transparent);
+
+      }
+
+      .items div:nth-child(3)::before{
+        background:linear-gradient(135deg, black, transparent);
+
+        
+      }
+
+      .items div h2{
+          font-size: 80px;
+          font-weight: normal;
+          color: white;
+          position: relative;
+      }
+
+      .items div:nth-child(1){
+          background-color: red;
+      }
+
+      .items div:nth-child(2){
+          background-color: blue;
+      }
+
+      .items div:nth-child(3){
+          background-color: yellow;
+      }
+      .btns{
+          text-align: center;
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          text-align: center;
+          height: 6%;
+          background-color: gray;
+          opacity: 0.5;
+          line-height: 50px;
+      }
+
+      .btns label{
+          display: inline-block;
+          height: 7px;
+          cursor: pointer;
+          width: 50px;
+          background-color: white;
+      }
+
+      input[id=tab1]:checked ~.tabs .items{
+          left: 0;
+      }
+
+      input[id=tab2]:checked ~.tabs .items{
+          left: -100%;
+      }
+
+      input[id=tab3]:checked ~.tabs .items{
+          left: -200%;
+      }
+
+      
+      input[id=tab1]:checked ~.btns label[for=tab1],
+      input[id=tab2]:checked ~.btns label[for=tab2],
+      input[id=tab3]:checked ~.btns label[for=tab3]{
+        background-color: black;
+    }
+
+      input[id=tab2]:checked ~.tabs .items{
+          left: -100%;
+      }
+
+      input[id=tab3]:checked ~.tabs .items{
+          left: -200%;
+      }
+
+      
+
+      
+
+
+
+      </style>
+</head>
+<body>
+    <div class="tab-inner">
+
+        <input type="radio" name="menu" id="tab1" checked>
+        <input type="radio" name="menu" id="tab2" >
+        <input type="radio" name="menu" id="tab3"> 
+
+
+        <div class="tabs">
+            <div class="items">
+                <div class="item"><h2>Slide Content 01</h2></div>
+                <div class="item"><h2>Slide Content 02</h2></div>
+                <div class="item"><h2>Slide Content 03</h2></div>
+            </div>
+        </div>
+
+        <div class="btns">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+    </div>    
+</body>
+</html>
