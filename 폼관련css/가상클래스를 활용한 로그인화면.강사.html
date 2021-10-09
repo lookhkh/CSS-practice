@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            text-decoration: none;
+            color:#222;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .login{
+            width: 800px;
+            background-color: #eeeaea;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            box-sizing: border-box;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.212);
+            padding: 20px;
+        }
+
+        .login span{
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .login input[type=email],
+        .login input[type=password]{
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: 1s;
+        }
+
+        .login p{
+            overflow: hidden;
+        }
+        .login p label{
+            float: left;
+            cursor: pointer;
+        }
+        .login p a{
+            float: right;
+        }
+
+        .login button{
+            background-color: #2991b1;
+            color: #fff;
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .login button:hover{
+            background-color: royalblue;
+        }
+
+        .login input[type=email]:hover,
+        .login input[type=password]:hover{
+            border: 1px solid dodgerblue;
+            box-shadow: 0 0 5px dodgerblue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form action="" class="login">
+        <span>Email</span>
+        <input type="email" name="" id="" placeholder="Email">
+
+        <span>Password</span>
+        <input type="password" name="" id="" placeholder="Password">
+        
+        <p>
+            <label for="checkin">
+                <input type="checkbox" name="" id="checkin"> Keep me logged in
+            </label>
+            <a href="#none">Forgot Your password? Log in</a>
+        </p>
+         <button>Log in</button>
+    </form>
+
+</body>
+</html>

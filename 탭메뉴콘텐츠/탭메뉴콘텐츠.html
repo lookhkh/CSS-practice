@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body
+    {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(199, 198, 198);
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    .container{
+        width: 800px;
+        height: 450px;
+        box-shadow: 0 0 5px black;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .container h2,
+    .container h4{
+        text-align: center;
+    }
+
+    .container h2 span{
+        color: red;
+    }
+
+    .container .imgs{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    
+    .container .imgs img{
+        width: 100px;
+        height: 100px;
+        filter: grayscale(1);
+
+    }
+
+    .container .imgs img.active{
+        filter: grayscale(0);
+    }
+
+    .container p{
+        text-align: center;
+        padding: 50px;
+    }
+
+    .profile{
+        display: none;
+    }
+
+    .profile.active{
+        display:block;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2><span>CoddingWorks</span> Publishing Online Class</h2>
+        <div class="imgs">
+            <img src="이미지1.png" id="tab1" class="active" alt="">    
+            <img src="이미지2.png" id="tab2" alt="">    
+            <img src="이미지3.png" id="tab3" alt="">    
+        </div>
+    <div data-target="tab1" class="profile active">
+        <p>
+            Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Quas quae veniam iure 
+             consectetur deleniti vitae debitis earum quos minus!
+              Praesentium quos 
+        
+        </p>
+        <h4>Dev Hy</h4>
+    </div>
+
+    <div data-target="tab2" class="profile">
+        <p>
+            Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Quas quae veniam iure 
+             consectetur deleniti vitae debitis earum quos minus!
+              Praesentium quos 
+            magnam eaque sunt eius odio ipsum tempore laboriosam hic.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Atque sit nemo nostrum ex molestias accusamus nam est vel
+              adipisci distinctio, nihil ad soluta commodi s
+            apiente sunt numquam voluptate porro consequuntur.
+        </p>
+        <h4>Dev ZIN</h4>
+    </div>
+
+    <div data-target="tab3" class="profile">
+        <p>
+            Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Quas quae veniam iure 
+             consectetur deleniti vitae debitis earum quos minus!
+              Praesentium quos 
+            magnam eaque sunt eius odio ipsum tempore laboriosam hic.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Atque sit nemo nostrum ex molestias accusamus nam est vel
+              adipisci distinctio, nihil ad soluta commodi s
+            apiente sunt numquam voluptate porro consequuntur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis veritatis nemo, laudantium expedita vero mollitia labore? A minus omnis sequi eos in. Alias voluptatem sit atque quis, laboriosam beatae facere.
+        </p>
+        <h4>Dev PARK</h4>
+    </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    const $imgs = document.querySelector('.imgs');
+    const imgLists = document.querySelectorAll('img')
+    let lastImg = document.querySelector('img.active')
+    const p = document.querySelectorAll('.profile')
+    
+    $imgs.addEventListener('click',(e)=>{
+        const target = e.target
+        if(target.nodeName!=="IMG") return;
+
+
+        imgLists.forEach(a=>{
+            if(a!==target&&a.classList.contains('active')){
+                a.classList.toggle('active')
+            }else if(a===target){
+                a.classList.toggle('active')
+                lastImg = a;
+            }
+        })
+
+        const checkList = Array.from(imgLists);
+        if(checkList.indexOf('img.active')===-1){
+            lastImg.classList.add('active')
+        }
+        p.forEach(a=>{
+            if(a.dataset.target===lastImg.id){
+                a.classList.add('active')
+            }else{
+                a.classList.remove('active')
+            }
+        })
+    })
+
+
+</script>
