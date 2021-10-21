@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            }
+
+        a{
+            font-size: 4em;
+            text-decoration: none;
+            color: white;
+        }
+
+        li{
+            list-style: none;
+        }
+
+                body{
+                    margin: 0;
+                    background-color: black;
+                }
+
+                .navi {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1000;
+                }
+                .navi li {}
+                .navi li a{
+                    font-size: 4em;
+                    text-decoration: none;
+                    color: white;
+                    position: relative;
+                }
+                .navi li a::before{
+                    position: absolute;
+                    content:attr(data-text);
+                    left: 0;
+                    top: 0;
+                    color: yellowgreen;
+                    overflow: hidden;
+                    width: 0%;
+                    transition: 0.5s;
+                }
+
+                .navi li:hover a::before{
+                    width: 100%;
+                }
+
+                .photo{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: gray;
+                    z-index: 1;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    transition: 1s;
+                }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <ul class="navi">
+        <li data-img="비와당신.png"><a data-text="ABOUT" href="#none">ABOUT</a></li>
+        <li data-img="yua.png"><a data-text="INSTRUCTOR" href="#none">INSTRUCTOR</a></li>
+        <li data-img="비와당신.png"><a data-text="CLASS" href="#none">CLASS</a></li>
+        <li data-img="yua.png"><a data-text="LOCATION" href="#none">LOCATION</a></li>
+    </ul>
+    <div class="photo">
+
+    </div>
+</div>
+    
+    
+</body>
+</html>
+<script>
+    window.addEventListener('load',e=>{
+    const photo = document.querySelector('.photo');
+    const lis = document.querySelectorAll('li');
+        lis.forEach(a=>a.addEventListener('mouseenter',e=>{
+            const img = a.dataset.img;
+            photo.style.backgroundImage=`url(${img}`
+            console.log(photo.style.backgroundImage=img)
+        }))
+
+        lis.forEach(a=>a.addEventListener('mouseleave',e=>{
+            photo.style.backgroundImage=""
+        }))
+
+   })
+</script>
