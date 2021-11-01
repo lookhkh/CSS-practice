@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+    <div style="width: 900px; height: 900px;">
+        <!--차트가 그려질 부분-->
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+</html>
+<script>
+const context =document.getElementById('myChart').getContext('2d');
+let a = 0;
+let b= 0;
+let c= 0;
+let d= 0;
+a=0;
+b=0;
+c=0;
+
+
+function inti(){
+
+const myChart = new Chart(context,{
+    type : 'line',
+    data:{
+        labels:[
+            '1','2','3','4'
+        ],
+        datasets:[{
+            label: 'test1',
+            fill: false,
+            data:[
+                a,b,c,d
+            ],
+            backgroundColor:[
+            'rgba(255, 99, 132, 0.2)',
+            ],
+            borderColor: [
+                                //경계선 색상
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',                  
+                            ],
+                            borderWidth: 2 //경계선 굵기
+                        },
+                        {
+            label: 'test2',
+            fill: false,
+            data:[
+                13,2,10,5
+            ],
+            backgroundColor:[
+            'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                                //경계선 색상
+                                'rgba(255, 206, 86, 1)',                  
+                            ],
+                            borderWidth: 2 //경계선 굵기
+                        }
+        
+        ],
+
+        
+                    },
+        options: {
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }
+                        ]
+                    },
+                    responsive: true,
+
+                }
+})
+}
+
+
+console.log(context)
+
+const body = document.querySelector('body')
+body.addEventListener('click',(e)=>{
+    d = Math.random(10)*1;
+    a+=d;
+    b/=d*2*2;
+    c*=(d*10+1)*10;
+
+    inti();
+})
+
+</script>
